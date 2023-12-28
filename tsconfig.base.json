@@ -15,6 +15,7 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@people/shared-models": ["libs/shared/models/src/index.ts"],
       "@people/shared-ui": ["libs/shared/ui/src/index.ts"]
     }
   },
