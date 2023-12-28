@@ -2,7 +2,10 @@
   "name": "@people/source",
   "version": "0.0.0",
   "license": "MIT",
-  "scripts": {},
+  "scripts": {
+    "affected:graph": "npx nx graph --affected --base=master",
+    "affected:test": "npx nx affected -t test --base=master"
+  },
   "private": true,
   "dependencies": {
     "@angular/animations": "~17.0.0",

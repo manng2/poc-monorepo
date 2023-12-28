@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'people-text-input',
@@ -7,4 +7,6 @@ import { Component } from '@angular/core';
   templateUrl: './text-input.component.html',
   styleUrl: './text-input.component.css',
 })
-export class TextInputComponent {}
+export class TextInputComponent {
+  @Input() placeholder = '';
+}
