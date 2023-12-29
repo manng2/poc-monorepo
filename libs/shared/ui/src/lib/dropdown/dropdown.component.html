@@ -3,7 +3,7 @@
     <button
       type="button"
       class="inline-flex w-full justify-between gap-x-1.5 bg-white px-4 py-2 text-sm text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50 text-left h-11 items-center min-w-44"
-      id="menu-button"
+      data-testid="dropdown-button"
       aria-expanded="true"
       aria-haspopup="true"
       (click)="toggle()"
@@ -45,6 +45,7 @@
         [ngClass]="value() === option.value ? 'bg-blue-100 text-white' : ''"
         role="menuitem"
         tabindex="-1"
+        data-testid="dropdown-option"
         (click)="selectOption(option.value)"
         >{{ option.label }}</span
       >

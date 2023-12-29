@@ -8,7 +8,6 @@ import { NgIf } from '@angular/common';
   standalone: true,
   imports: [SearchInputComponent, FormsModule, NgIf],
   templateUrl: './search-input-showcase.component.html',
-  styleUrl: './search-input-showcase.component.css',
 })
 export class SearchInputShowcaseComponent {
   @Input() placeholder = '';
