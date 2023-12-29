@@ -16,7 +16,8 @@
     "baseUrl": ".",
     "paths": {
       "@people/shared-models": ["libs/shared/models/src/index.ts"],
-      "@people/shared-ui": ["libs/shared/ui/src/index.ts"]
+      "@people/shared-ui": ["libs/shared/ui/src/index.ts"],
+      "@people/shared-utils": ["libs/shared/utils/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

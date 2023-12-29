@@ -44,7 +44,7 @@
         class="text-gray-700 block px-4 py-2 text-sm cursor-pointer"
         [ngClass]="value() === option.value ? 'bg-blue-100 text-white' : ''"
         role="menuitem"
-        tabindex="-1"
+        tabindex="0"
         data-testid="dropdown-option"
         (click)="selectOption(option.value)"
         >{{ option.label }}</span

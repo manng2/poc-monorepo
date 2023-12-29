@@ -1,6 +1,7 @@
 import { StoryObj, type Meta } from '@storybook/angular';
 import { DropdownShowcaseComponent } from './dropdown-showcase.component';
 import { within } from '@storybook/testing-library';
+import { wait } from '@people/shared-utils';
 
 const meta: Meta<DropdownShowcaseComponent> = {
   component: DropdownShowcaseComponent,
@@ -16,13 +17,17 @@ export const Behavior: Story = {
   play: async ({ canvasElement }) => {
     const canvas = within(canvasElement);
 
+    await wait(.5);
+
     const dropdown = await canvas.findByTestId('dropdown-button');
 
-    await dropdown.click();
+    dropdown.click();
+
+    await wait(1);
 
     const option = await canvas.findAllByTestId('dropdown-option');
 
-    await option[0].click();
+    option[0].click();
   }
 };
 
