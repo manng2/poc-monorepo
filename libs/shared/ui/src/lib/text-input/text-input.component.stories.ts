@@ -11,15 +11,16 @@ const meta: Meta<TextInputComponent> = {
 export default meta;
 type Story = StoryObj<TextInputComponent>;
 
-export const Primary: Story = {
+export const Default: Story = {
   args: {
     placeholder: '',
   },
 };
 
-export const Heading: Story = {
+export const Search: Story = {
   args: {
     placeholder: '',
+    type: 'search'
   },
   play: async ({ canvasElement }) => {
     const canvas = within(canvasElement);
