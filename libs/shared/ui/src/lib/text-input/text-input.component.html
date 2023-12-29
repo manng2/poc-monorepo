@@ -3,8 +3,7 @@
     <ng-content select="[prefix]"></ng-content>
   </div>
   <input
-    [type]="type"
-    class="block w-full p-3 text-sm text-gray-900 rounded-lg bg-gray-50 placeholder-gray-400 outline-blue-200 border-light-gray border-1 focus:outline-offset-2"
+    class="block w-full p-3 text-sm text-gray-900 rounded-lg bg-gray-50 placeholder-gray-400 outline-blue-200 border-light-gray border-1 focus:outline-offset-2 border-solid"
     [placeholder]="placeholder"
     [(ngModel)]="value"
     (ngModelChange)="onChange!($event)"

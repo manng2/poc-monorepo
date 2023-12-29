@@ -1,24 +1,23 @@
 import { ChangeDetectionStrategy, Component, Input, forwardRef } from '@angular/core';
 import { ControlValueAccessor, FormsModule, NG_VALUE_ACCESSOR } from '@angular/forms';
-
 import { IdModel } from '@people/shared-models';
 
 @Component({
-  selector: 'people-text-input',
+  selector: 'people-search-input',
   standalone: true,
   imports: [FormsModule],
-  templateUrl: './text-input.component.html',
+  templateUrl: './search-input.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush,
   providers: [
     {
       provide: NG_VALUE_ACCESSOR,
-      useExisting: forwardRef(() => TextInputComponent),
+      useExisting: forwardRef(() => SearchInputComponent),
       multi: true
     }
   ],
-  styleUrls: ['./text-input.component.css']
+  styleUrls: ['./search-input.component.css']
 })
-export class TextInputComponent implements ControlValueAccessor {
+export class SearchInputComponent implements ControlValueAccessor {
   @Input() placeholder = '';
 
   value = '';

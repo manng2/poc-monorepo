@@ -1,29 +1,18 @@
 import type { Meta, StoryObj } from '@storybook/angular';
-import { TextInputComponent } from './text-input.component';
 
-import { within } from '@storybook/testing-library';
-import { expect } from '@storybook/jest';
+import { TextInputComponent } from './text-input.component';
 
 const meta: Meta<TextInputComponent> = {
   component: TextInputComponent,
-  title: 'TextInputComponent',
+  title: 'Text Input',
 };
 export default meta;
 type Story = StoryObj<TextInputComponent>;
 
-export const Default: Story = {
-  args: {
-    placeholder: '',
-  },
-};
+export const Default: Story = {};
 
-export const Search: Story = {
+export const Placeholder: Story = {
   args: {
-    placeholder: '',
-    type: 'search'
-  },
-  play: async ({ canvasElement }) => {
-    const canvas = within(canvasElement);
-    expect(canvas.getByText(/text-input works!/gi)).toBeTruthy();
-  },
+    placeholder: 'Text input',
+  }
 };
